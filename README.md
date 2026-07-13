@@ -6,17 +6,19 @@ A comprehensive full-stack Examination Management System designed for autonomous
 
 > [!NOTE]
 >
-> This repository is a **public demonstration** of XAMPRO. It showcases the system architecture, technology stack, user interface, and selected implementation to demonstrate the project's design and development approach.
+> This repository is a **public demonstration** of **XAMPRO**. It showcases the system architecture, technology stack, user interface, and selected implementation to demonstrate the project's design and development approach.
 >
 > The complete production version contains additional modules, advanced business logic, institution-specific configurations, security implementations, and other proprietary components that are intentionally excluded from this repository.
+>
+> The institution name, branding, academic information, logos, and sample data used throughout this demonstration are included solely for showcasing the application's functionality and user interface. They do **not** represent an official deployment, endorsement, partnership, or affiliation with any educational institution. All such information is used exclusively for demonstration and portfolio purposes.
 
 ---
 
 # Overview
 
-XAMPRO is an enterprise-style Examination Management System developed to streamline and automate the complete examination process within autonomous higher education institutions.
+XAMPRO is a comprehensive Examination Management System developed to streamline and automate the complete examination process within autonomous higher education institutions.
 
-The platform manages the entire examination lifecycle, from student registration and examination scheduling to hall ticket generation, seating arrangements, dummy numbering, valuation, result publication, and student services.
+The platform manages the entire examination lifecycle, from student registration and examination scheduling to hall ticket generation, seating arrangements, dummy numbering, valuation, mark entry, grade processing, result publication, and student services.
 
 The system follows a modular architecture with secure role-based access control, RESTful APIs, and a scalable PostgreSQL database.
 
@@ -51,7 +53,7 @@ This repository intentionally excludes:
 
 ---
 
-# Technology Stack
+# Tech Stack
 
 | Layer | Technologies |
 |--------|--------------|
@@ -134,7 +136,7 @@ apps/
 
 # Screenshots
 
-The following screenshots demonstrate the user interfaces available in the public demonstration.
+The following screenshots demonstrate the primary user interfaces available in the public demonstration of XAMPRO.
 
 ---
 
@@ -192,17 +194,18 @@ The following screenshots demonstrate the user interfaces available in the publi
 
 ![Student End Semester Result](screenshots/student-endsem-result.png)
 
-
 ---
 
 # Disclaimer
 
 This repository is intended solely for portfolio and demonstration purposes.
 
-The production version of XAMPRO includes additional modules, workflows, optimizations, and proprietary implementations that are not included in this public repository.
+The production version of XAMPRO includes additional modules, workflows, optimizations, institution-specific customizations, and proprietary implementations that are not included in this public repository.
 
 ---
 
 # Author
 
 **Adhil Fahim A**
+
+GitHub: https://github.com/Adhil-fah
