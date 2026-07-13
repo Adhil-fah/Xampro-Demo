@@ -148,15 +148,27 @@ The following screenshots demonstrate the primary user interfaces available in t
 
 ## Controller of Examination
 
-![Admin Login](screenshots/admin-login.png)
+### Login Page
 
-![Admin Dashboard](screenshots/admin-dashboard.png)
+![Login Page](screenshots/admin-login.png)
+
+### Dashboard
+
+![Dashboard](screenshots/admin-dashboard.png)
+
+### Hall Ticket Generation
 
 ![Hall Ticket Generation](screenshots/hall-ticket-generation.png)
 
+### Practical Examination Timetable
+
 ![Practical Examination Timetable](screenshots/practical-exam-timetable.png)
 
+### Semester Marksheet Generation
+
 ![Semester Marksheet Generation](screenshots/semester-marksheet-generation.png)
+
+### Moderation Eligibility Report
 
 ![Moderation Eligibility Report](screenshots/moderation-eligibility-report.png)
 
@@ -164,35 +176,56 @@ The following screenshots demonstrate the primary user interfaces available in t
 
 ## Internal Staff
 
-![Internal Login](screenshots/internal-login.png)
+### Login Page
 
-![Internal Dashboard](screenshots/internal-dashboard.png)
+![Login Page](screenshots/internal-login.png)
 
-![Internal Mark Entry](screenshots/internal-mark-entry.png)
+### Dashboard
+
+![Dashboard](screenshots/internal-dashboard.png)
+
+### Student Profile Lookup
 
 ![Student Profile Lookup](screenshots/student-profile-lookup.png)
+
+### Internal Mark Entry
+
+![Internal Mark Entry](screenshots/internal-mark-entry.png)
 
 ---
 
 ## External Examiners
 
-![External Login](screenshots/external-login.png)
+### Login Page
+
+![Login Page](screenshots/external-login.png)
+
+### Module Selection
 
 ![Module Selection](screenshots/external-module-selection.png)
 
-![Dummy Number Mark Entry](screenshots/external-dummy-mark-entry.png)
+### Dummy Number Mark Entry
 
+![Dummy Number Mark Entry](screenshots/external-dummy-mark-entry.png)
 ---
 
 ## Student Portal
 
-![Student Login](screenshots/student-login.png)
+### Login Page
 
-![Student Dashboard](screenshots/student-dashboard.png)
+![Login Page](screenshots/student-login.png)
 
-![Student Hall Ticket](screenshots/student-hall-ticket.png)
+### Dashboard
 
-![Student End Semester Result](screenshots/student-endsem-result.png)
+![Dashboard](screenshots/student-dashboard.png)
+
+### Hall Ticket
+
+![Hall Ticket](screenshots/student-hall-ticket.png)
+
+### End Semester Result
+
+![End Semester Result](screenshots/student-endsem-result.png)
 
 ---
 
