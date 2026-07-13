@@ -168,6 +168,8 @@ The following screenshots demonstrate the user interfaces available in the publi
 
 ![Internal Mark Entry](screenshots/internal-mark-entry.png)
 
+![Student Profile Lookup](screenshots/student-profile-lookup.png)
+
 ---
 
 ## External Examiners
@@ -190,7 +192,6 @@ The following screenshots demonstrate the user interfaces available in the publi
 
 ![Student End Semester Result](screenshots/student-endsem-result.png)
 
-![Student Profile Lookup](screenshots/student-profile-lookup.png)
 
 ---
 
