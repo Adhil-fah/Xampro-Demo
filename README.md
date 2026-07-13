@@ -136,98 +136,216 @@ apps/
 
 # Screenshots
 
+# XAMPRO – Examination Management System
+ 
+A comprehensive digital platform designed for autonomous higher education institutions to automate the end-to-end examination lifecycle. The platform streamlines operations from student registration and examination scheduling to hall ticket generation, seating arrangements, dummy numbering, multi-phase valuation, mark entry, grade processing, and result publication.
+ 
+---
+ 
+## Features
+ 
+### Admin / COE
+ 
+**System & Master Data**
+- Department, Program & Branch management with a hierarchical tree structure.
+- Subject management with evaluation scheme linkage, credits, max marks, and category classification.
+- Student biodata with automated registration and roll number generation.
+- Staff management with login credentials and subject assignments.
+- Configurable evaluation schemes with internal test conversion rules.
+- Institutional settings with 100+ configurable parameters.
+**Pre-Examination**
+- Exam fee structure configuration.
+- Nominal roll processing and official student rolls.
+- Question paper code allocation.
+- Exam timetable scheduling with FN/AN sessions.
+- Automated hall seating arrangements.
+- Practical allotment scheduling.
+- Hall ticket generation and publication.
+**Examination Operations**
+- Exam attendance tracking.
+- Dummy numbering system for answer script anonymization.
+- Mark entry supporting total marks, question-wise, and non-letter grading.
+- Multi-phase valuation with deviation-based moderation rules.
+- Moderation eligibility analysis.
+- Revaluation application and marks processing.
+- Internal marks consolidation.
+**Result Management**
+- Result publication with configurable formats.
+- Grade classifications for semester, final, and non-letter evaluations.
+- Transfer and rejoin case evaluation.
+- Transfer certificate generation.
+**Administration**
+- Role-based access control with granular menu-level permissions.
+- Dashboard with analytics and enrollment trend charts.
+- Staff privilege management.
+- Holiday and working day calendar.
+- System configuration panel.
+### Internal Staff
+ 
+Dashboard, assigned courses, student profiles, attendance management, COPO mapping, internal mark entry, question-wise mark entry, and question bank management.
+ 
+### External Examiners
+ 
+Register-numbered and dummy-numbered mark entry (total marks and question-wise).
+ 
+### Student Portal
+ 
+Profile dashboard, hall ticket download, attendance records, internal assessment marks, published results, exam registration, elective registration, and fee statements.
+ 
+---
+ 
+## Technology Stack
+ 
+| Layer | Technologies | Purpose |
+| :--- | :--- | :--- |
+| **Frontend** | React 18, TypeScript 5 | UI framework |
+| | Vite 5 + SWC | Build tool and compiler |
+| | Tailwind CSS 3 + Radix UI | Styling and component library |
+| | React Router v6 | Client-side routing |
+| | Recharts | Data visualization |
+| | jsPDF + html2canvas | PDF generation |
+| | JsBarcode | Barcode rendering |
+| | TanStack React Query | Server state management |
+| | React Hook Form + Zod | Form validation |
+| | PWA (Workbox) | Offline capabilities |
+| **Backend** | Node.js + Express 4 | REST API server |
+| | TypeScript | Type safety |
+| | JWT + bcryptjs | Authentication and password hashing |
+| | express-rate-limit | Rate limiting |
+| | Multer | File upload handling |
+| | JSZip | Batch export support |
+| **Database** | PostgreSQL | Primary database |
+| | pg (node-postgres) | Database driver with connection pooling |
+| | SQL migrations | Schema versioning on server start |
+ 
+---
+ 
+## Architecture
+ 
+```
+                    Browser (SPA)
+                         │
+   React App → Service → Repository → ApiClient
+                         │ HTTP
+                         ▼
+                Express REST API
+        Routes → Controllers → PostgreSQL
+        ┌─────────────────────────────┐
+        │  Auth → Rate Limit → Audit  │
+        └─────────────────────────────┘
+                         │
+                         ▼
+                    PostgreSQL
+```
+ 
+### Project Structure
+ 
+```text
+apps/
+├── client/ (Frontend src/)
+│   ├── api/             # HTTP REST client
+│   ├── components/      # Reusable UI components
+│   ├── config/          # Route and privilege definitions
+│   ├── hooks/           # Custom React hooks
+│   ├── pages/           # Role-based page components
+│   ├── repositories/    # Data access layer
+│   ├── services/        # Business logic layer
+│   └── utils/           # Academic utilities and helpers
+│
+└── api/ (Backend/)
+    ├── controllers/     # Request handling and business logic
+    ├── database/        # Connection pool and SQL migrations
+    ├── middleware/      # Authentication, authorization, rate limiting
+    └── routes/          # API route definitions
+```
+ 
+## Authentication
+ 
+- Unified login supporting admin, staff, external examiner, and student roles.
+- JWT-based sessions with per-role session tracking.
+- Granular privilege control at the menu level.
+## Public Demonstration Scope
+ 
+This repository serves as a public demonstration of XAMPRO, showcasing system architecture, user interface design, core examination workflows, and the overall development approach. The complete production version contains additional advanced business logic, modules, institution-specific configurations, and proprietary components intentionally excluded from this public portfolio repository. All institution names, branding, logos, and sample data are used exclusively for demonstration purposes.
+ 
+## Screenshots
+ 
 The following screenshots demonstrate the primary user interfaces available in the public demonstration of XAMPRO.
-
+ 
 ---
-
+ 
 ## Role Selection
-
 ![Role Selection](screenshots/role-selection.png)
-
+ 
 ---
-
+ 
 ## Controller of Examination
-
+ 
 ### Login Page
-
 ![Login Page](screenshots/admin-login.png)
-
+ 
 ### Dashboard
-
 ![Dashboard](screenshots/admin-dashboard.png)
-
+ 
 ### Hall Ticket Generation
-
 ![Hall Ticket Generation](screenshots/hall-ticket-generation.png)
-
+ 
 ### Practical Examination Timetable
-
 ![Practical Examination Timetable](screenshots/practical-exam-timetable.png)
-
+ 
 ### Semester Marksheet Generation
-
 ![Semester Marksheet Generation](screenshots/semester-marksheet-generation.png)
-
+ 
 ### Moderation Eligibility Report
-
 ![Moderation Eligibility Report](screenshots/moderation-eligibility-report.png)
-
+ 
 ---
-
+ 
 ## Internal Staff
-
+ 
 ### Login Page
-
 ![Login Page](screenshots/internal-login.png)
-
+ 
 ### Dashboard
-
 ![Dashboard](screenshots/internal-dashboard.png)
-
+ 
 ### Student Profile Lookup
-
 ![Student Profile Lookup](screenshots/student-profile-lookup.png)
-
+ 
 ### Internal Mark Entry
-
 ![Internal Mark Entry](screenshots/internal-mark-entry.png)
-
+ 
 ---
-
+ 
 ## External Examiners
-
+ 
 ### Login Page
-
 ![Login Page](screenshots/external-login.png)
-
+ 
 ### Module Selection
-
 ![Module Selection](screenshots/external-module-selection.png)
-
+ 
 ### Dummy Number Mark Entry
-
 ![Dummy Number Mark Entry](screenshots/external-dummy-mark-entry.png)
+ 
 ---
-
+ 
 ## Student Portal
-
+ 
 ### Login Page
-
 ![Login Page](screenshots/student-login.png)
-
+ 
 ### Dashboard
-
 ![Dashboard](screenshots/student-dashboard.png)
-
+ 
 ### Hall Ticket
-
 ![Hall Ticket](screenshots/student-hall-ticket.png)
-
+ 
 ### End Semester Result
-
 ![End Semester Result](screenshots/student-endsem-result.png)
-
+ 
 ---
+ 
 
 # Disclaimer
 
